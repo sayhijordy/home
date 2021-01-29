@@ -31,11 +31,11 @@
             </div> <a class="popup-close" onclick="history.back()">&times;</a> </div>
     </div>
     <div id="userName"> @sayhijordy </div>
-    <div id="links">
+  	  <div id="links">
         <div id="links">
             <a class="link" href="https://www.instagram.com/sayhijordy" target="_blank"> <i class="fab fa-instagram">&nbsp;</i>Instagram </a>
+            <a class="link" href="https://twitch.tv/" target="_blank"><i class="fab fa-twitch">&nbsp;</i>Twitch </a>
             <a class="link" href="https://twitter.com/sayhijordy" target="_blank"> <i class="fab fa-twitter">&nbsp;</i>Twitter </a>
-            <a class="link" href="https://twitch.tv/sayhijordy" target="_blank"> <i class="fab fa-twitch">&nbsp;</i>Twitch </a>
             <a class="link" href="https://vk.com/sayhijordy" target="_blank"> <i class="fab fa-vk">&nbsp;</i>vk </a>
             <a class="link" href="https://facebook.com/sayhijordy" target="_blank"> <i class="fab fa-facebook">&nbsp;</i>Facebook </a>
             <a class="link" href="https://soundcloud.com/sayhijordy" target="_blank"> <i class="fab fa-soundcloud">&nbsp;</i>Soundcloud </a>
