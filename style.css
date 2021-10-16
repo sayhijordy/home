@@ -101,6 +101,10 @@ span.album-name {
     color: #000;
 }
 
+ul#social {
+    list-style-type: none;
+}
+
 .link {
     font-weight: 900;
     background-color: #fcff68;
