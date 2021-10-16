@@ -97,6 +97,23 @@ li#social-list {
     display: flex;
 }
 
+.lightwidget, .lightwidget * {
+    height: 100%!important;
+    line-height: 1.7!important;
+}
+
+span.main-title {
+    font-size: 3.5rem;
+}
+
+.border-bottom {
+    border-bottom: none!important;
+}
+
+.text-muted {
+    color: #000!important;
+}
+
 .flex-child {
     flex: 1;
     border: 2px solid yellow;
@@ -894,12 +911,14 @@ li.social-link {
 }
 
 .coin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     position: relative;
-    width: 100px;
+    width: 100%;
     height: 100px;
-    margin: 50px auto;
-    transform-style: preserve-3d;
-    animation: rotate3d 8s linear infinite;
+    margin: 70px auto;
 }
 
 .coin__front,
