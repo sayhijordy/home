@@ -17,6 +17,11 @@
     <!-- Bootstrap core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Gallery core CSS -->
+    <link rel="/css/feed.css">
+    <link href="/css/feed.css" rel="stylesheet">
+    <script src="/js/feed.js"></script>
+
     <style>
         .bd-placeholder-img {
             font-size: 1.125rem;
@@ -70,11 +75,12 @@
         </header>
     </section>
 
-    <div class="col-lg-8 mx-auto p-3 py-md-5">
+    <div class="col-lg-12 mx-auto p-3 py-md-5">
         <main>
+            <div class="container-fluid">
             <div class="media-container">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <ul id="social-list">
                             <li class="social-link"><a class="link" href="https://www.instagram.com/sayhijordy"
                                     target="_blank"> <i class="fab fa-instagram">&nbsp;</i>Instagram </a></li>
@@ -101,10 +107,19 @@
                     </ul> -->
                     </div>
 
-                    <div class="col-md-6">
-                        <script src="https://assets.juicer.io/embed.js" type="text/javascript"></script>
-<link href="https://assets.juicer.io/embed.css" media="all" rel="stylesheet" type="text/css" />
-<ul class="juicer-feed" data-feed-id="sayhijordy"><h1 class="referral"><a href="https://www.juicer.io">Powered by Juicer.io</a></h1></ul>
+                    <div class="col-md-8">
+                        <div class="gallery">
+                            <?php
+                                // (B) GET LIST OF IMAGE FILES FROM GALLERY FOLDER
+                                $dir = __DIR__ . DIRECTORY_SEPARATOR . "scripts/instagram/feed" . DIRECTORY_SEPARATOR;
+                                $images = glob($dir . "*.{jpg,jpeg,gif,png,bmp,webp}", GLOB_BRACE);
+
+                                // (C) OUTPUT IMAGES 
+                                foreach (array_reverse($images) as $i) {
+                                    printf("<img src='scripts/instagram/feed/%s'/>", basename($i));
+                                }
+                            ?>
+                        </div>
                     </div>
                 </div>
             </div>
