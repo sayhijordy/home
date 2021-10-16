@@ -100,11 +100,11 @@
                     </div>
                 </div>
         </main>
-        <footer class="pt-5 my-5 text-muted border-top">
+        <footer class="pt-5 my-5">
             created by sayhijordy &middot; &copy; 2021
         </footer>
     </div>
-    
+
     <script src="/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

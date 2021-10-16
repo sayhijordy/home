@@ -1,8 +1,10 @@
 /* (A) GALLERY CONTAINER */
 /* (A1) ON BIG SCREENS */
 .gallery {
+    max-height: 771px;
+    overflow-y: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* 3 IMAGES PER ROW */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* 3 IMAGES PER ROW */
     grid-gap: 10px;
     max-width: 1200px;
     margin: 0 auto; /* HORIZONTAL CENTER */
@@ -17,7 +19,8 @@
   /* (B) THUMBNAILS */
   .gallery img {
     width: 100%;
-    height: 150px;
+    height: 200px;
+    max-height: 250px;
     /* FILL, CONTAIN, COVER, SCALE-DOWN : USE WHICHEVER YOU LIKE */
     object-fit: cover;
   }
