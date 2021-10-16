@@ -148,6 +148,7 @@ span.album-name {
     background-size: 80%;
     animation: animate 3s linear var(--delay) infinite;
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: rgba(255, 255, 255, 0);
 }
 
