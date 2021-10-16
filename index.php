@@ -55,6 +55,11 @@
         </header>
     </section>
 
+    <?php
+        $shipments = json_decode(file_get_contents(__DIR__ . "/scripts/instagram/feeds/sayhijordy.json"), true);
+        print_r($shipments);
+    ?>
+
     <div class="col-lg-12 mx-auto p-3 py-md-5">
         <main>
             <div class="container-fluid">
@@ -100,11 +105,12 @@
                     </div>
                 </div>
         </main>
+
         <footer class="pt-5 my-5">
             created by sayhijordy &middot; &copy; 2021
         </footer>
     </div>
-
+    
     <script src="/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

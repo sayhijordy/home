@@ -17,7 +17,7 @@ body {
     min-height: 100vh;
     background-color: #ffff67;
     opacity: 0;
-    font-family: 'Brutal Dude', sans-serif;
+    /* font-family: 'Brutal Dude', sans-serif; */
     animation: 1s ease-out var(--delay) 1 transitionAnimation;
     animation-fill-mode: forwards;
 }
@@ -88,7 +88,7 @@ section.animated-background {
     font-weight: bold;
     line-height: 1.25;
     display: block;
-    font-family: 'Brutal Dude', serif;
+    /* font-family: 'Brutal Dude', serif; */
 }
 
 ul#social-list {
