@@ -77,10 +77,20 @@ section.animated-background {
     font-family: 'Brutal Dude', serif;
 }
 
-.socials {
-    width: 50%;
+ul#social-list {
+    width: 100%;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    /* For IE, the outcast */
+    zoom:1;
+    *display: inline;
+}
+
+li#social-list {
     float: left;
-    padding: 20px;
+    padding: 2px 5px;
+    border: 1px solid black;
 }
 
 .main-container {
@@ -108,7 +118,12 @@ ul#media-list, ul#social-list {
 .video-container {
     overflow: hidden;
     position: relative;
+    margin-bottom: 22px;
     width:100%;
+}
+
+li.social-link {
+    margin-bottom: 21px;
 }
 
 .video-container::after {
