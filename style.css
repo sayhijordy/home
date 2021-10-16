@@ -83,7 +83,7 @@ ul#social-list {
     margin: 0;
     padding: 0;
     /* For IE, the outcast */
-    zoom:1;
+    zoom: 1;
     *display: inline;
 }
 
@@ -97,9 +97,10 @@ li#social-list {
     display: flex;
 }
 
-.lightwidget, .lightwidget * {
-    height: 100%!important;
-    line-height: 1.7!important;
+.lightwidget,
+.lightwidget * {
+    height: 100% !important;
+    line-height: 1.7 !important;
 }
 
 span.main-title {
@@ -107,11 +108,11 @@ span.main-title {
 }
 
 .border-bottom {
-    border-bottom: none!important;
+    border-bottom: none !important;
 }
 
 .text-muted {
-    color: #000!important;
+    color: #000 !important;
 }
 
 .flex-child {
@@ -128,7 +129,8 @@ span.album-name {
     color: #000;
 }
 
-ul#media-list, ul#social-list {
+ul#media-list,
+ul#social-list {
     list-style-type: none;
 }
 
@@ -136,7 +138,7 @@ ul#media-list, ul#social-list {
     overflow: hidden;
     position: relative;
     margin-bottom: 22px;
-    width:100%;
+    width: 100%;
 }
 
 li.social-link {
