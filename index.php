@@ -22,24 +22,8 @@
     <link href="/css/feed.css" rel="stylesheet">
     <script src="/js/feed.js"></script>
 
-    <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
-
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
-    </style>
-
     <!-- Custom CSS Stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TLBJ0DWNYQ"></script>
@@ -53,9 +37,6 @@
 
         gtag('config', 'G-TLBJ0DWNYQ');
     </script>
-
-    <!-- Custom styles for this template
-    <link href="/css/style.css" rel="stylesheet"> -->
 </head>
 
 <body>
