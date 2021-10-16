@@ -1,73 +1,132 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="sayhijordy">
+    <meta name="author" content="sayhijordy">
+    <meta name="generator" content="sayhijordy v0.1">
     <title>sayhijordy</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/images/avatar.jpg" type="image/x-icon" />
+    <link rel="canonical" href="https://sayhijordy.com">
+
+    <!-- Font Awesome core CSS -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-    <link rel="icon" href="/images/avatar.jpg" type="image/x-icon" /> 
-</head>
-    <script>
-        document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
-    </script>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+    <!-- Custom CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TLBJ0DWNYQ"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
 
         gtag('config', 'G-TLBJ0DWNYQ');
     </script>
+
+    <!-- Custom styles for this template
+    <link href="/css/style.css" rel="stylesheet"> -->
+</head>
+
 <body>
+
     <section class="animated-background">
         <div id="stars1"></div>
         <div id="stars2"></div>
         <div id="stars3"></div>
-    
- <div class="coin">
-  <div class="coin__front"></div>
-  <div class="coin__edge">
-    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-     <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
 
-  </div>
-  <div class="coin__back"></div>
-  <div class="coin__shadow"></div>
-</div>
-</section>
-    <div class="overlay" id="popup">
-        <div class="popup">
-            <div class="popup-photo">
-                <iframe src="https://www.youtube.com/embed/S17vCV6XXkM?modestbranding=1&showinfo=0&rel=0&theme=light&controls=0" width="560" height="315" frameborder="0"></iframe>
-            </div> <a class="popup-close" onclick="history.back()">&times;</a> </div>
+
+        <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+            <div class="coin">
+                <div class="coin__front"></div>
+                <div class="coin__edge">
+                    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                </div>
+                <div class="coin__back"></div>
+                <div class="coin__shadow"></div>
+            </div>
+        </header>
+    </section>
+
+    <div class="col-lg-8 mx-auto p-3 py-md-5">
+        <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+            <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+                <span class="fs-4">sayhijordy presents lostnfound</span>
+            </a>
+        </header>
+
+        <main>
+            <div class="row g-5">
+                <div class="col-md-6">
+                    <ul id="social-list">
+                        <li><a class="link" href="https://www.instagram.com/sayhijordy" target="_blank"> <i class="fab fa-instagram">&nbsp;</i>Instagram </a></li>
+                        <li><a class="link" href="https://twitter.com/sayhijordy" target="_blank"> <i class="fab fa-twitter">&nbsp;</i>Twitter </a></li>
+                        <li><a class="link" href="https://twitch.tv/sayhijordy" target="_blank"> <i class="fab fa-twitch">&nbsp;</i>Twitch </a></li>
+                        <li><a class="link" href="https://vk.com/sayhijordy" target="_blank"> <i class="fab fa-vk">&nbsp;</i>vk </a></li>
+                        <li><a class="link" href="https://facebook.com/sayhijordy" target="_blank"> <i class="fab fa-facebook">&nbsp;</i>Facebook </a></li>
+                        <li><a class="link" href="https://soundcloud.com/sayhijordy" target="_blank"> <i class="fab fa-soundcloud">&nbsp;</i>Soundcloud </a></li>
+                        <li><a class="link" href="https://open.spotify.com/artist/08ZHl9fzcWwjrPzd2pZjl8?si=OmIamBQTRtihVqj_QD00aQ" target="_blank"> <i class="fab fa-spotify">&nbsp;</i>Spotify </a></li>
+                        <li><a class="link" href="#popup"> <i class="fab fa-youtube">&nbsp;</i>Bottom of the Bottle MV </a></li>
+                    </ul>
+                    <!-- <ul class="icon-list">
+                        <li><a href="https://github.com/twbs/bootstrap-npm-starter" rel="noopener"
+                                target="_blank">Bootstrap npm starter</a></li>
+                        <li class="text-muted">Bootstrap Parcel starter (coming soon!)</li>
+                    </ul> -->
+                </div>
+
+                <div class="col-md-6">
+                    <!-- <h2>Guides</h2>
+                    <p>Read more detailed instructions and documentation on using or contributing to Bootstrap.</p> -->
+                    <div class="media-container">
+                        <ul id="media-list">
+                            <li class="media-li"><iframe width="560" height="315" src="https://www.youtube.com/embed/eRN7us92XTY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+                            <li class="media-li"><iframe width="560" height="315" src="https://www.youtube.com/embed/DGJBgvsBY84" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="pt-5 my-5 text-muted border-top">
+            Created by the Bootstrap team &middot; &copy; 2021
+        </footer>
     </div>
-    <div id="userName">sayhijordy <span class="album-name">presents lostnfound</span></div>
-      <div class="main-container">
-        <div class="flex-child social">
-            <a class="link" href="https://www.instagram.com/sayhijordy" target="_blank"> <i class="fab fa-instagram">&nbsp;</i>Instagram </a>
-            <a class="link" href="https://twitter.com/sayhijordy" target="_blank"> <i class="fab fa-twitter">&nbsp;</i>Twitter </a>
-            <a class="link" href="https://twitch.tv/sayhijordy" target="_blank"> <i class="fab fa-twitch">&nbsp;</i>Twitch </a>
-            <a class="link" href="https://vk.com/sayhijordy" target="_blank"> <i class="fab fa-vk">&nbsp;</i>vk </a>
-            <a class="link" href="https://facebook.com/sayhijordy" target="_blank"> <i class="fab fa-facebook">&nbsp;</i>Facebook </a>
-            <a class="link" href="https://soundcloud.com/sayhijordy" target="_blank"> <i class="fab fa-soundcloud">&nbsp;</i>Soundcloud </a>
-            <a class="link" href="https://open.spotify.com/artist/08ZHl9fzcWwjrPzd2pZjl8?si=OmIamBQTRtihVqj_QD00aQ" target="_blank"> <i class="fab fa-spotify">&nbsp;</i>Spotify </a>
-            <a class="link" href="#popup"> <i class="fab fa-youtube">&nbsp;</i>Bottom of the Bottle MV </a>
-            <br>
-        </div>
-        <div class="flex-child media">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/eRN7us92XTY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-    </div>
-        <div id="hashtag"> #LostBoysEnterprise </div>
+
+
+    <script src="/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>
