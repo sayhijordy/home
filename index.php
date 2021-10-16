@@ -88,7 +88,7 @@
                         <div class="col-md-8">
                             <div class="gallery">
                                 <?php
-                                    $feed_dir = file_get_contents(__DIR__ . "/scripts/instagram/feed/sayhijordy.json");
+                                    $feed_dir = file_get_contents(__DIR__ . "/scripts/instagram/feed/feed.json");
                                     $json = json_decode($feed_dir, true);
                                     
                                     // (B) GET LIST OF IMAGE FILES FROM GALLERY FOLDER
@@ -100,9 +100,11 @@
                                         $feed_caption = $obj['edge_media_to_caption']['edges']['0']['node']['text'];
                                         
                                         foreach (array_reverse($images) as $i) {
-                                            printf("<img title='" . $feed_caption . "'src='scripts/instagram/feed/%s'/>", basename($i));
+                                            printf("<div id='container' style='position: relative;'><img src='scripts/instagram/feed/%s'/><span style='font-size: 20px; color: #FFF; position: absolute; top: 100px; left: 20px;'>" . $feed_caption . "</span></div>", basename($i));
                                         }
+                                        break;
                                     }
+                                    
                                 ?>
                             </div>
                         </div>
