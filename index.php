@@ -1,3 +1,44 @@
+<?php
+/***********************************************************************
+  PHP Photo Gallery
+  --------------------
+  Generates a photo gallery from a folder of images. Detects if it's
+  being used in CLI or browser, and either outputs a log, or the gallery
+  itself, generating thumbnails as it goes. 
+ ***********************************************************************/
+
+// small function to generate thumbnails
+function make_thumb( $src, $dest, $desired_width ) {
+
+    /* read the source image */
+    $source_image = imagecreatefromjpeg( $src );
+    $width = imagesx( $source_image );
+    $height = imagesy( $source_image );
+    
+    /* find the "desired height" of this thumbnail, relative to the desired width  */
+    $desired_height = floor( $height * ( $desired_width / $width ) );
+    
+    /* create a new, "virtual" image */
+    $virtual_image = imagecreatetruecolor( $desired_width, $desired_height );
+    
+    /* copy source image at a resized size */
+    imagecopyresampled( $virtual_image, $source_image, 0, 0, 0, 0, $desired_width, $desired_height, $width, $height );
+    
+    /* create the physical thumbnail image to its destination */
+    imagejpeg( $virtual_image, $dest, 60 );
+
+}
+
+
+// a function to check if we're running CLI or in browser.
+function is_cli() {
+    return defined( 'STDIN' );
+}
+
+
+// if we're in a browser, output some header HTML and basic styles.
+if ( !is_cli() ) {
+?>
 <!doctype html>
 <html lang="en">
 
@@ -37,6 +78,18 @@
 
         gtag('config', 'G-TLBJ0DWNYQ');
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" />
+    <script>
+        $(document).ready(function () {
+            $('a').magnificPopup({
+                type: 'image'
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -49,7 +102,7 @@
         <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
             <div class="coin">
                 <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
-                    <span class="main-title">sayhijordy lostnfound</span>
+                    <span class="main-title">sayhijordy presents lostnfound</span>
                 </a>
             </div>
         </header>
@@ -88,22 +141,49 @@
                         <div class="col-md-8">
                             <div class="gallery">
                                 <?php
-                                    $feed_dir = file_get_contents(__DIR__ . "/scripts/instagram/feed/sayhijordy.json");
-                                    $json = json_decode($feed_dir, true);
-                                    
-                                    // (B) GET LIST OF IMAGE FILES FROM GALLERY FOLDER
-                                    $dir = __DIR__ . DIRECTORY_SEPARATOR . "scripts/instagram/feed" . DIRECTORY_SEPARATOR;
-                                    $images = glob($dir . "*.{jpg,jpeg,gif,png,bmp,webp}", GLOB_BRACE);
+}
 
-                                    // (C) OUTPUT IMAGES
-                                    foreach($json['GraphImages'] as $obj){
-                                        $feed_caption = $obj['edge_media_to_caption']['edges']['0']['node']['text'];
-                                        
-                                        foreach (array_reverse($images) as $i) {
-                                            printf("<div id='container' style='position: relative;'><img src='scripts/instagram/feed/%s'/><span style='font-size: 20px; color: #FFF; position: absolute; top: 100px; left: 20px;'>" . $feed_caption . "</span></div>", basename($i));
-                                        }
-                                        break;
-                                    }
+
+// scan the current directory to get a list of files.
+$photos = scandir( '.' );
+
+
+// begin logging if in cli
+if ( is_cli() ) print "Generating thumbnails...\n";
+
+
+// if there are photos in the same directory as this script
+if ( !empty( $photos ) ) {
+
+    // loop through the photos array
+    foreach ( $photos as $photo ) {
+
+        // get the extension
+        $path = './' . $photo;
+        $ext = pathinfo( $path, PATHINFO_EXTENSION );
+
+            // only output tiles for image files.
+            if ( in_array( strtolower($ext), array( 'jpg', 'jpeg' ) ) && substr( $photo, 0, 1 ) != '_' ) { 
+
+            // set the destination for the thumbnail file
+            $thumb = './_' . $photo;
+
+            // only generate a thumbnail if one doesn't already exist, logging if in cli
+            if ( !file_exists( $thumb ) ) {
+                make_thumb( $path, $thumb, 500 );
+                if ( is_cli() ) print "Thumbnail created: " . str_replace( './', '', $thumb ) . "\n";
+            } else {
+                if ( is_cli() ) print "Thumbnail exists: " . str_replace( './', '', $thumb ) . "\n";
+            }
+
+            // if we're in a browser, output the code for the photo tile, with the thumbnail as a background.
+            if ( !is_cli() ) {
+                ?><a href="<?php print $photo ?>" class="photo"
+                                    style="background-image: url(_<?php print $photo ?>);"></a><?php
+            }
+        }
+    }
+}
                                 ?>
                             </div>
                         </div>
