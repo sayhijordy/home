@@ -114,9 +114,8 @@
         <footer class="pt-5 my-5">
             created by sayhijordy &middot; &copy; 2021
         </footer>
-        
-    </div>
 
+    </div>
     <script src="/js/bootstrap.bundle.min.js"></script>
 </body>
 
