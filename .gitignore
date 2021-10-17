@@ -1,2 +1,3 @@
 .DS_Store
 scripts/instagram/feed/**[.jpg,.png,.gif,.jpeg,.mp4,.mov]
+gallery/**[.jpg,.png,.gif,.jpeg,.mp4,.mov]
