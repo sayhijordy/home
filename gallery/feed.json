@@ -1,0 +1,48 @@
+{
+    "GraphImages": [
+        {
+            "edge_media_to_caption": {
+                "edges": [
+                    {
+                        "node": {
+                            "text": "featuring dropping on all platforms October 22nd!"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "edge_media_to_caption": {
+                "edges": [
+                    {
+                        "node": {
+                            "text": "My new album “lostnfound” is coming soon! 14 tracks with a lot of awesome features. Also, a music video. I spent over a year on this album and I’m glad it’s finally almost finished. I put everything into this album. I’ll be dropping the track list in the next upcoming week. Love you all ✌️ ❤️"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "edge_media_to_caption": {
+                "edges": [
+                    {
+                        "node": {
+                            "text": "lovelu$t EP with @yungscythe TBD"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "edge_media_to_caption": {
+                "edges": [
+                    {
+                        "node": {
+                            "text": "shoutout @pacc.life"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}
