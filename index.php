@@ -88,7 +88,7 @@
                         <div class="col-md-8">
                             <div class="gallery">
                                 <?php
-                                    $feed_dir = file_get_contents(__DIR__ . "/scripts/instagram/feed/feed.json");
+                                    $feed_dir = file_get_contents(__DIR__ . "/scripts/instagram/feed/sayhijordy.json");
                                     $json = json_decode($feed_dir, true);
                                     
                                     // (B) GET LIST OF IMAGE FILES FROM GALLERY FOLDER
@@ -104,7 +104,6 @@
                                         }
                                         
                                     }
-                                    
                                 ?>
                             </div>
                         </div>
