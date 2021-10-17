@@ -49,7 +49,7 @@
         <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
             <div class="coin">
                 <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
-                    <span class="main-title">sayhijordy presents lostnfound</span>
+                    <span class="main-title">sayhijordy lostnfound</span>
                 </a>
             </div>
         </header>
