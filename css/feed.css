@@ -1,33 +1,41 @@
 /* (A) GALLERY CONTAINER */
 /* (A1) ON BIG SCREENS */
 .gallery {
-    max-height: 771px;
-    overflow-y: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* 3 IMAGES PER ROW */
-    grid-gap: 10px;
-    max-width: 1200px;
-    margin: 0 auto; /* HORIZONTAL CENTER */
+  max-height: 771px;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  /* 3 IMAGES PER ROW */
+  grid-gap: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+  /* HORIZONTAL CENTER */
+}
+
+/* (A2) ON SMALL SCREENS */
+@media screen and (max-width: 640px) {
+  .gallery {
+    grid-template-columns: repeat(2, auto);
+    /* 2 IMAGES PER ROW */
   }
-  /* (A2) ON SMALL SCREENS */
-  @media screen and (max-width: 640px) {
-    .gallery {
-      grid-template-columns: repeat(2, auto); /* 2 IMAGES PER ROW */
-    }
-  }
-   
-  /* (B) THUMBNAILS */
-  .gallery img {
-    width: 100%;
-    height: 200px;
-    max-height: 250px;
-    /* FILL, CONTAIN, COVER, SCALE-DOWN : USE WHICHEVER YOU LIKE */
-    object-fit: cover;
-  }
-  .gallery img:fullscreen { object-fit: contain; }
-   
-  /* (X) DOES NOT MATTER */
-  body, html {
-    padding: 0;
-    margin: 0;
-  }
+}
+
+/* (B) THUMBNAILS */
+.gallery img {
+  width: 100%;
+  height: 200px;
+  max-height: 250px;
+  /* FILL, CONTAIN, COVER, SCALE-DOWN : USE WHICHEVER YOU LIKE */
+  object-fit: cover;
+}
+
+.gallery img:fullscreen {
+  object-fit: contain;
+}
+
+/* (X) DOES NOT MATTER */
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
