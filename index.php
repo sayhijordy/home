@@ -103,7 +103,6 @@
                                             printf("<img title='" . $feed_caption . "'src='scripts/instagram/feed/%s'/>", basename($i));
                                         }
                                     }
-                                    
                                 ?>
                             </div>
                         </div>
@@ -114,6 +113,7 @@
         <footer class="pt-5 my-5">
             created by sayhijordy &middot; &copy; 2021
         </footer>
+        
     </div>
 
     <script src="/js/bootstrap.bundle.min.js"></script>
