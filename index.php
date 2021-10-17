@@ -68,6 +68,7 @@ if ( !is_cli() ) {
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TLBJ0DWNYQ"></script>
+    
     <script>
         window.dataLayer = window.dataLayer || [];
 
@@ -139,7 +140,7 @@ if ( !is_cli() ) {
                         </div>
 
                         <div class="col-md-8">
-                            <div class="gallery">
+                            <!-- <div class="gallery"> -->
                                 <?php
 }
 
@@ -177,9 +178,8 @@ if ( !empty( $photos ) ) {
             }
 
             // if we're in a browser, output the code for the photo tile, with the thumbnail as a background.
-            if ( !is_cli() ) {
-                ?><a href="<?php print $photo ?>" class="photo"
-                                    style="background-image: url(_<?php print $photo ?>);"></a><?php
+            if ( !is_cli() ) { ?>
+            <a href="<?php print $photo ?>" class="photo" style="background-image: url(_<?php print $photo ?>);"></a><?php
             }
         }
     }
@@ -188,7 +188,7 @@ if ( !empty( $photos ) ) {
                             </div>
                         </div>
                     </div>
-                </div>
+                <!-- </div> -->
         </main>
 
         <footer class="pt-5 my-5">
@@ -196,6 +196,7 @@ if ( !empty( $photos ) ) {
         </footer>
 
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-compat/3.0.0-alpha1/jquery.min.js"></script>
     <script src="/js/bootstrap.bundle.min.js"></script>
 </body>
 
