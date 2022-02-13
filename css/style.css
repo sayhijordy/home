@@ -22,6 +22,34 @@ body {
     animation-fill-mode: forwards;
 }
 
+.copyright {
+    text-align: center;
+}
+
+.col-center {
+    float: none;
+    margin: 0 auto;
+}
+
+.fa,
+.fab,
+.fal,
+.far,
+.fas {
+    line-height: inherit !important;
+}
+
+i.fab.fa-instagram,
+i.fab.fa-twitter,
+i.fab.fa-twitch,
+i.fab.fa-vk,
+i.fab.fa-facebook,
+i.fab.fa-soundcloud,
+i.fab.fa-spotify,
+i.fab.fa-youtube {
+    float: left;
+}
+
 .bd-placeholder-img {
     font-size: 1.125rem;
     text-anchor: middle;
